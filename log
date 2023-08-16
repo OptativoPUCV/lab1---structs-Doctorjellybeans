@@ -1,1 +1,12 @@
 
+Wed 16 Aug 2023 10:04:57 PM UTC: 
+ exercises.c | 133 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 125 insertions(+), 8 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:69:14: error: ‘j’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   69 |     *newSize = j;
+      |     ~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+415ee61
