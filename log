@@ -10,3 +10,9 @@ exercises.c:69:14: error: ‘j’ may be used uninitialized in this function [-W
 cc1: all warnings being treated as errors
 Compilation failed
 415ee61
+Wed 16 Aug 2023 10:05:39 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|3
+total_score: 40/70
+89092b9
