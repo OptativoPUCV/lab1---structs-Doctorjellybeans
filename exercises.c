@@ -119,8 +119,9 @@ int checkSorted(int arr[], int size)
   
     if (izq < der)
     {
-        for (int i = 0; i < size / 2; i++)
+        for (int i = 0; i < size; i++)
         {
+            printf("%d %d %d \n",arr[i],arr[der],i);
             if (arr[i] > arr[der])
             {
                return 0;
@@ -131,7 +132,7 @@ int checkSorted(int arr[], int size)
     }
     else
     {
-        for (int i = 0; i < size / 2; i++)
+        for (int i = 0; i < size; i++)
         {
             if (arr[i] < arr[der])
             {
@@ -142,6 +143,7 @@ int checkSorted(int arr[], int size)
         return -1; 
     }
 }
+
 
 /*
 Ejercicio 6: Información de una Biblioteca
