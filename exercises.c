@@ -119,7 +119,7 @@ int checkSorted(int arr[], int size)
   
     if (izq < der)
     {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size - 1; i++)
         {
             if (arr[i] > der)
             {
