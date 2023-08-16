@@ -116,31 +116,38 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) 
 {
     int izq = arr[0], der = size - 1;
+    printf("%d \n",der);
   
     if (izq < der)
     {
         for (int i = 0; i < size; i++)
         {
             printf("%d %d %d \n",arr[i],arr[der],i);
+            if (arr[i] == arr[der])
+            {
+                return 1;
+            }
             if (arr[i] > arr[der])
             {
                return 0;
             }
             der--;
         }
-        return 1; 
     }
     else
     {
         for (int i = 0; i < size; i++)
         {
+            if (arr[i] == arr[der])
+            {
+                return -1;
+            }
             if (arr[i] < arr[der])
             {
                return 0;
             }
             der--;
         }
-        return -1; 
     }
 }
 
