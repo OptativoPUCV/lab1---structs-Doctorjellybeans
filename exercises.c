@@ -115,39 +115,24 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 {
-    int izq = arr[0], der = size - 1;
-    printf("%d \n",der);
-  
-    if (izq < der)
-    {
-        for (int i = 0; i < size; i++)
-        {
-            printf("%d %d %d \n",arr[i],arr[der],i);
-            if (arr[i] == arr[der])
-            {
-                return 1;
-            }
-            if (arr[i] > arr[der])
-            {
-               return 0;
-            }
-            der--;
+    int asc = 1;
+    int des = 1;
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < arr[i - 1]) {
+            asc = 0;
+        }
+        if (arr[i] > arr[i - 1]) {
+            des = 0;
         }
     }
-    else
-    {
-        for (int i = 0; i < size; i++)
-        {
-            if (arr[i] == arr[der])
-            {
-                return -1;
-            }
-            if (arr[i] < arr[der])
-            {
-               return 0;
-            }
-            der--;
-        }
+
+    if (asc) {
+        return 1; 
+    } else if (des) {
+        return -1; 
+    } else {
+        return 0; 
     }
 }
 
